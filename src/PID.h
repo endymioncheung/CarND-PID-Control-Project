@@ -30,14 +30,18 @@ class PID {
    * @output The total PID error
    */
   double TotalError();
-
+  
  private:
+  double prev_cte;
   /**
    * PID Errors
    */
   double p_error;
   double i_error;
   double d_error;
+
+  double total_error;
+  double best_error;
 
   /**
    * PID Coefficients
